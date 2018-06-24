@@ -10,9 +10,9 @@ app/storage/
 public/storage
 public/hot
 storage/*.key
-.env.*.php
-.env.php
-.env
+//.env/.*.php
+//.en/v.php
+//.e/nv
 Homestead.yaml
 Homestead.json
 
