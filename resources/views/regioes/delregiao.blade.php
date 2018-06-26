@@ -7,14 +7,13 @@
 <br>
 <div class="container">
     <div class="alert alert-success">
-        <b>A região {{$idreg}} foi adicionada com sucesso!</b>
+        <b>A Região {{$rflag}} foi deletado com sucesso!</b>
     </div>
-</div>
-<script>
+    <script>
         setTimeout(() => {
         window.location.href="http://localhost:8000/regioes"
         }, 1000);
     </script>
-
+</div>
 
 @stop

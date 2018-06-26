@@ -7,14 +7,14 @@
 <br>
 <div class="container">
     <div class="alert alert-success">
-        <b>A região {{$idreg}} foi adicionada com sucesso!</b>
+        <b>O Funcionário {{$flag}} foi deletado com sucesso!</b>
     </div>
-</div>
-<script>
+    <script>
         setTimeout(() => {
-        window.location.href="http://localhost:8000/regioes"
+        window.location.href="http://localhost:8000/funcionarios"
         }, 1000);
-    </script>
 
+    </script>
+</div>
 
 @stop

@@ -10,6 +10,11 @@
         <b>O funcionário {{$idfunc}} território foi adicionado com sucesso!</b>
     </div>
 </div>
+<script>
+        setTimeout(() => {
+        window.location.href="http://localhost:8000/funcionarios-territorios"
+        }, 1000);
+    </script>
 
 
 @stop

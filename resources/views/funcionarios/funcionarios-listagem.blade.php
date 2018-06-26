@@ -41,14 +41,7 @@
                 <td class="text-center">{{ $f->TelefoneResidencial }}</td>
                 <td>
                     <div class="form-row">
-                        <form class="mx-1 my-1" action = "//funcionario-update-form.php" method="post">
-                            <input type="hidden" name="IDFuncionario"  value="<//?=$funcionario['IDFuncionario']?>"/>
-                            <button class="btn btn-primary">Atualizar</button>
-                        </form>
-                        <form class="mx-1 my-1" action = "//funcionario-delete-confirma.php" method="post">
-                            <input type="hidden" name="IDFuncionario" value="<//?=$funcionario['IDFuncionario']?>"/>
-                            <button class="btn btn-danger">Remover</button>
-                        </form>
+                        <a  class="btn btn-danger" href="{{action ('CrudController@removefun', $f->IDFuncionario)}}">Remover</a>
                     </div>
                 </td>
             </tr>

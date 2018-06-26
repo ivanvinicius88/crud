@@ -2,6 +2,7 @@
 @extends('layout/principal')
 
 @section('conteudo')
+
 <br>
 <br>
 <br>
@@ -18,18 +19,16 @@
         <label for="nome">Nome</label>
         <input name="nome" type="text" class="form-control" id="nome" placeholder="Nome" >
       </div>
-
       <div class="form-group mx-3 my-4 col-md-2">
         <label for="regiao">Regiao</label>
         <select name="regiao" id="regiao" class="form-control">
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
+        @foreach ($regioesb as $r)
+          <option value="{{ $r->IDRegiao }}">{{ $r->DescricaoRegiao }}</option>
+        @endforeach
         </select>
    	  </div>
-
      </div>
+     
      <div class="form-row">
         <button type="submit" class="my-4 mx-3 btn btn-primary">Cadastrar</button>
    		  <button type="reset" class="my-4 mx-0 btn btn-danger">Limpar</button>

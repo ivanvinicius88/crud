@@ -10,6 +10,11 @@
         <b>O térritório  {{$idter}} foi adicionada com sucesso!</b>
     </div>
 </div>
+<script>
+        setTimeout(() => {
+        window.location.href="http://localhost:8000/territorios"
+        }, 1000);
+    </script>
 
 
 @stop

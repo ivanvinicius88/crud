@@ -52,15 +52,14 @@
       </div>
     </div>
     <div class="form-row">
-      <div class="form-group mx-3 my-4 col-md-3">
+    <div class="form-group mx-3 my-4 col-md-2">
         <label for="regiao">Regiao</label>
-          <select name="regiao" id="regiao" class="form-control">
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-          </select>
-      </div>
+        <select name="regiao" id="regiao" class="form-control">
+        @foreach ($regioesc as $r)
+          <option value="{{ $r->IDRegiao }}">{{ $r->DescricaoRegiao }}</option>
+        @endforeach
+        </select>
+   	  </div>
       <div class="form-group mx-3 my-4 col-md-3">
         <label for="cep">CEP</label>
         <input name="cep" type="text" class="form-control" id="cep" >

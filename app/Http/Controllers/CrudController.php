@@ -12,7 +12,8 @@ class CrudController extends Controller {
     }
 
     public function novofun(){
-        return view('funcionarios/cadfuncionario');
+        $regioesc = DB::select("select * from regiao");
+        return view('funcionarios/cadfuncionario')->with('regioesc', $regioesc);;
         }
     
     public function adicionafun(){
@@ -53,13 +54,11 @@ class CrudController extends Controller {
         return view('funcionarios/funadicionado')->with('id', $id);
     }  
     
-   /* public function removefun($IDFuncionario){
-        $funcionarios = funcionarios::find($IDFuncionario);
-        $funcionarios->delete();
-        return redirect() ->action('CrudController@listafun');
-        }
-
-        */
+    public function removefun($IDFuncionario){
+    $flag = $IDFuncionario;
+    $delete = DB::delete($sql = "DELETE FROM funcionarios WHERE funcionarios.IDFuncionario = {$IDFuncionario}");
+    return view('funcionarios/delfuncionario')->with('flag', $flag);
+    }
 
 
 
@@ -94,8 +93,18 @@ class CrudController extends Controller {
                 'DescricaoRegiao' => $descreg
             ]);
             return view('regioes/regadicionado')->with('idreg', $idreg);
-        }    
+        }   
+        
+    public function removereg($IDRegiao){
+        $rflag = $IDRegiao;
+        $delete = DB::delete($sql = "DELETE FROM regiao WHERE regiao.IDRegiao = {$IDRegiao}");
+        return view('regioes/delregiao')->with('rflag', $rflag);
+    }
      
+    //public function listaregb(){
+       // $regioesb = DB::select('select * from regiao');
+        //return view('territorios/cadterritorios')->with('regioesb', $regioesb);
+    //}
      
 
 
@@ -116,7 +125,8 @@ class CrudController extends Controller {
     }
 
     public function novoter(){
-        return view('territorios/cadterritorios');
+        $regioesb = DB::select("select * from regiao");
+        return view('territorios/cadterritorios')->with('regioesb', $regioesb);
         }
 
     public function adicionater(){
@@ -131,6 +141,13 @@ class CrudController extends Controller {
         ]);
         return view('territorios/teradicionado')->with('idter', $idter);
     } 
+
+    public function removeter($IDTerritorio){
+        $tflag = $IDTerritorio;
+        $delete = DB::delete($sql = "DELETE FROM territorios WHERE territorios.IDTerritorio = {$IDTerritorio}");
+        return view('territorios/delterritorios')->with('tflag', $tflag);
+    }
+     
 
 
 
@@ -169,6 +186,13 @@ class CrudController extends Controller {
         ]);
         return view('funcionarios_territorios/funcionario_territorioadicionado')->with('idfunc', $idfunc);
     }
+
+    public function removefunter($IDFuncionario){
+        $ftflag = $IDFuncionario;
+        $delete = DB::delete($sql = "DELETE FROM funcionarios_territorios WHERE funcionarios_territorios.IDFuncionario = {$IDFuncionario} ");
+        return view('funcionarios_territorios/delfuncionarios_territorios')->with('ftflag', $ftflag);
+    }
+     
 
 
 }

@@ -27,6 +27,7 @@ Route::get('/cadfuncionario', 'CrudController@novofun');
 
 Route::post('/funcionarios/adicionafun', 'CrudController@adicionafun');
 
+Route::get('/funcionarios/{IDFuncionario}', 'CrudController@removefun');
 
 
 
@@ -43,7 +44,7 @@ Route::get('/cadregioes', 'CrudController@novoreg');
 
 Route::post('/regioes/adicionareg', 'CrudController@adicionareg');
 
-//Route::get('/funcionarios/remove/{IDFuncionario}', 'ProdutoController@removefun');
+Route::get('/regioes/{IDRegiao}', 'CrudController@removereg');
 
 
 
@@ -65,6 +66,8 @@ Route::get('/cadterritorios', 'CrudController@novoter');
 
 Route::post('/territorios/adicionater', 'CrudController@adicionater');
 
+Route::get('/territorios/{IDTerritorio}', 'CrudController@removeter');
+
 
 
 
@@ -81,4 +84,6 @@ Route::get('/funcionarios-territorios', 'CrudController@listafunter');
 Route::get('/cadfuncionario_territorio', 'CrudController@novofunter');
 
 Route::post('/funcionarios_territorios/adicionafunter', 'CrudController@adicionafunter');
+
+Route::get('/funcionarios_territorios/{IDFuncionario}', 'CrudController@removefunter');
 
