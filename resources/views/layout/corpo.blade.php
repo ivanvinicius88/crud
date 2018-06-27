@@ -4,12 +4,10 @@
 @section('conteudo')
 
 <div class="container">
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
+
+    <div class="container">
+        <img src="https://images.pexels.com/photos/356830/pexels-photo-356830.jpeg?cs=srgb&dl=architecture-bay-bridge-356830.jpg&fm=jpg" class="img-fluid" alt="Responsive image">
+    </div>
     <hr>
     <br>
     <br>

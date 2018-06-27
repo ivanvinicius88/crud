@@ -64,7 +64,11 @@
 				</div>
 			</div>
 		</div>	
-	</nav>
+  </nav>
+  <br>
+  <br>
+  <br>
+  <br> 
     <div class="container">
 
           @yield('conteudo')

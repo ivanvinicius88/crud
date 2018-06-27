@@ -12,7 +12,8 @@
  
  <br>
  <br>
-  <h5 class="text-center my-5">Listagem de Regiões</h5>
+ <div class="container col-md-8">
+    <h5 class="text-center my-5">Listagem de Regiões</h5>
         <table class="table table-striped table-bordered">
             <tr class="mb-1">
                 <td class="text-center h6">IDRegião</td>
@@ -31,5 +32,6 @@
             </tr>
             @endforeach
         </table>
+    </div>
     @endif
 @stop
